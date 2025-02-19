@@ -28,6 +28,29 @@ function dismissMessage() {
 
 setTimeout(dismissMessage, 5000);
 
+document.getElementById("animeForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevents the default form submission (page reload)
+
+    // Collect the form data
+    let formData = new FormData(this);
+
+    // Send the form data to the PHP file using fetch (AJAX)
+    fetch("https://anime-world.epizy.com/submit.php", {  // Update with your PHP file URL on InfinityFree
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())  // Convert the response to text
+    .then(data => {
+        alert(data);  // Show the success/error message from PHP
+        // Optionally, clear the form after submission
+        document.getElementById("animeForm").reset();
+    })
+    .catch(error => {
+        console.error("Error:", error);  // Log any error in the console
+        alert("There was an error with the submission.");
+    });
+});
+
 const animeData = [
     { title: "Solo Leveling", link: 'solo_leveling.html' },
     { title: "Mashle Magic and Muscles", link: 'mashle_magic_&_muscles.html' },
@@ -40,7 +63,8 @@ const animeData = [
     { title: "Weathering With You", link: 'https://mega.nz/file/2OoXRDZb#SKYpeNM71pWGgQVlCz5s68qWmcRUzfxwIzpHwMFbCsg' },
     { title: "Suzume", link: 'Movies/Suzume.mp4' },
     { title: "Naruto The Last Tower", link: 'Movies/naruto the last tower.mp4' },
-    { title: "Naruto The Last Movie", link: 'https://mega.nz/file/CLpAlbBJ#Bzm1AWHJR64iffbpwZgX0xXy_Tly5MdwV7c47xU0UY0' }
+    { title: "Naruto The Last Movie", link: 'https://mega.nz/file/CLpAlbBJ#Bzm1AWHJR64iffbpwZgX0xXy_Tly5MdwV7c47xU0UY0' },
+    { title: "86 (Eighty Six", link: '86.html'}
 ];
 
 function showSuggestions(input) {

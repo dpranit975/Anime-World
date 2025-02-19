@@ -64,7 +64,7 @@ const animeData = [
     { title: "Suzume", link: 'Movies/Suzume.mp4' },
     { title: "Naruto The Last Tower", link: 'Movies/naruto the last tower.mp4' },
     { title: "Naruto The Last Movie", link: 'https://mega.nz/file/CLpAlbBJ#Bzm1AWHJR64iffbpwZgX0xXy_Tly5MdwV7c47xU0UY0' },
-    { title: "86 (Eighty Six", link: '86.html'}
+    { title: "86 (Eighty Six)", link: '86.html'}
 ];
 
 function showSuggestions(input) {

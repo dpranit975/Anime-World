@@ -185,13 +185,13 @@ main {
     margin: 20px 0;
     padding: 20px;
     width: 30vh;
-    height: 60vm;
+    height: 60vh;
     display: inline-flex;
 }
 
 .card img {
     width: 30vh;
-    height: 60vm;
+    height: 60vh;
     border-radius: 2%;
 }
 
@@ -285,38 +285,15 @@ main {
         right: 5%;
         font-size: 20px;
     }
-    form#animeForm {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    form#animeForm input[type="text"],
-    form#animeForm input[type="email"] {
+
+    .card {
         width: 100%;
-        padding: 10px;
         margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
     }
-    
-    form#animeForm button[type="submit"] {
+
+    .card img {
         width: 100%;
-        padding: 10px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    form#animeForm button[type="submit"]:hover {
-        background-color: #0056b3;
+        height: auto;
     }
 }
 
@@ -361,4 +338,58 @@ form#animeForm button[type="submit"] {
 
 form#animeForm button[type="submit"]:hover {
     background-color: #333;
+}
+
+
+.form-wrapper {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.form-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.897);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.form-wrapper:hover .message {
+    /* Show message on hover */
+    opacity: 1;
+}
+
+.end-msg{
+    margin-top: 60px;
+    text-align: center;
+    background-color: #00000088;
+    display: flex;
+    border-radius: 5%;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
 }

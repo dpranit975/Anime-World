@@ -184,12 +184,20 @@
         </section>
     </main>
     <footer>
+        <div class="form-wrapper" id="formWrapper">
         <form id="animeForm">
+            <h2>Request an Anime</h2>
+            <p>Can't find your favorite anime? Request it here!</p>
             <input type="text" name="name" placeholder="Your Name" required><br>
-            <input type="email" name="e_id" placeholder="Your Email" required><br>  <!-- Changed 'email' to 'e_id' -->
-            <input type="text" name="a_name" placeholder="Anime Name" required><br>  <!-- Changed 'anime_name' to 'a_name' -->
+            <input type="email" name="e_id" placeholder="Your Email" required><br>  
+            <input type="text" name="a_name" placeholder="Anime Name" required><br> 
+            <div class="message">Form service will be started soon.</div> 
             <button type="submit">Submit Request</button>
         </form>
+        </div>
+        <div class="end-msg">
+            <h2>✨ Thank you for visiting Anime World! ✨</h2>
+        </div>
         <p>&copy; 2025 Anime World. All rights reserved.</p>
     </footer>
 <script src="script.js"></script>

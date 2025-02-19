@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Project</title>
+<title>Form Toggle with Hover Message</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.form-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.form-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#myForm {
+  /* Form styling */
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.783);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s ease; /* For smooth fade-in */
+}
+
+.form-wrapper:hover .message { /* Show message on hover */
+  opacity: 1;
+}
+
+/* Initially show the form */
+#myForm {
+  display: block;
+}
+
+.coming-soon {
+  font-size: 24px;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+  display: none; /* Initially hidden */
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to the Anime Project</h1>
-    <img src="https://i.pinimg.com/736x/7f/38/b3/7f38b317e103515ef0396ffef56f78e5.jpg" alt="Anime Image 2" width="500">
+
+<div class="container">
+  <div class="form-wrapper" id="formWrapper">
+    <!-- <div class="coming-soon" id="comingSoonMessage">Form service will be started soon.</div> -->
+    <form id="myForm">
+      <input type="text" placeholder="Name"><br>
+      <input type="email" placeholder="Email"><br>
+      <button type="button">Submit (Disabled)</button>
+      </form>
+  </div>
+</div>
+
 </body>
 </html>

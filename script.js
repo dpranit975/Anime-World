@@ -121,3 +121,14 @@ document.getElementById("animeForm").addEventListener("submit", function(event) 
         alert("There was an error with the submission.");
     });
 });
+
+// Form Disabling
+const formWrapper = document.getElementById('formWrapper');
+const myForm = document.getElementById('myForm');
+const comingSoonMessage = document.getElementById('comingSoonMessage');
+
+// Disable all form elements (including the button)
+const formElements = myForm.elements;
+for (let i = 0; i < formElements.length; i++) {
+  formElements[i].disabled = true;
+}

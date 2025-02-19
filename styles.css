@@ -324,6 +324,8 @@ form#animeForm button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 form#animeForm button[type="submit"]:hover {
@@ -341,23 +343,23 @@ form#animeForm button[type="submit"]:hover {
 }
 
 .form-wrapper:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
 .message {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.897);
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 5px;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     z-index: 11;
     opacity: 0;
     transition: opacity 0.2s ease;

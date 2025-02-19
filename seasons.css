@@ -1,0 +1,22 @@
+.seasons {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.seasons h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.seasons a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #555;
+}
+
+.seasons a:hover {
+    color: #007BFF;
+}

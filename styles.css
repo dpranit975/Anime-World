@@ -285,6 +285,39 @@ main {
         right: 5%;
         font-size: 20px;
     }
+    form#animeForm {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    form#animeForm input[type="text"],
+    form#animeForm input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    form#animeForm button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    form#animeForm button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
 }
 
 footer {
@@ -294,4 +327,38 @@ footer {
     padding: 10px 0;
     width: 100%;
     bottom: 0;
+}
+
+form#animeForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0000005d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form#animeForm input[type="text"],
+form#animeForm input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form#animeForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form#animeForm button[type="submit"]:hover {
+    background-color: #333;
 }

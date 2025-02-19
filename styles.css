@@ -185,13 +185,13 @@ main {
     margin: 20px 0;
     padding: 20px;
     width: 30vh;
-    height: 60vh;
+    height: 60vm;
     display: inline-flex;
 }
 
 .card img {
     width: 30vh;
-    height: 60vh;
+    height: 60vm;
     border-radius: 2%;
 }
 
@@ -284,16 +284,6 @@ main {
     .search-container::before {
         right: 5%;
         font-size: 20px;
-    }
-
-    .card {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
     }
 }
 

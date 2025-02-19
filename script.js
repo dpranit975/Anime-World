@@ -96,3 +96,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+// Form submission
+document.getElementById("animeForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevents the default form submission (no page refresh)
+
+    // Collect the form data
+    let formData = new FormData(this);
+
+    // Send the data to submit.php using fetch (AJAX)
+    fetch("https://anime-world.epizy.com/submit.php", {  // Update with your PHP URL on InfinityFree
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())  // Convert the response to text
+    .then(data => {
+        alert(data);  // Show the success/error message from PHP
+        // Optionally, clear the form after submission
+        document.getElementById("animeForm").reset();
+    })
+    .catch(error => {
+        console.error("Error:", error);  // Log any error in the console
+        alert("There was an error with the submission.");
+    });
+});

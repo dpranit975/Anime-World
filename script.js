@@ -28,29 +28,6 @@ function dismissMessage() {
 
 setTimeout(dismissMessage, 5000);
 
-document.getElementById("animeForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevents the default form submission (page reload)
-
-    // Collect the form data
-    let formData = new FormData(this);
-
-    // Send the form data to the PHP file using fetch (AJAX)
-    fetch("https://anime-world.epizy.com/submit.php", {  // Update with your PHP file URL on InfinityFree
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())  // Convert the response to text
-    .then(data => {
-        alert(data);  // Show the success/error message from PHP
-        // Optionally, clear the form after submission
-        document.getElementById("animeForm").reset();
-    })
-    .catch(error => {
-        console.error("Error:", error);  // Log any error in the console
-        alert("There was an error with the submission.");
-    });
-});
-
 const animeData = [
     { title: "Solo Leveling", link: 'solo_leveling.html' },
     { title: "Mashle Magic and Muscles", link: 'mashle_magic_&_muscles.html' },
@@ -58,13 +35,13 @@ const animeData = [
     { title: "Spy X Family", link: 'Spy_X_Family.html' },
     { title: "Wind Breaker", link: 'Wind_Breaker.html' },
     { title: "Baki Hanma", link: 'Baki_Hanma.html' },
-    { title: "Your Name", link: 'https://mega.nz/file/DHowUbyB#p5xl23-FrJyv1CEls1G2ZMOsfr5pNfMifDF9d-XiX3c' },
-    { title: "5 Centimeter Per Second", link: 'https://mega.nz/file/uXxEmKyQ#cTsF7tN94dmrd9P0iBAjID0XiyBWn1EE2-bXEb4WPn4' },
-    { title: "Weathering With You", link: 'https://mega.nz/file/2OoXRDZb#SKYpeNM71pWGgQVlCz5s68qWmcRUzfxwIzpHwMFbCsg' },
+    { title: "Your Name", link: 'Movies/your name.mp4' },
+    { title: "5 Centimeter Per Second", link: 'Movies/5 Centimeter per second .mp4' },
+    { title: "Weathering With You", link: 'Movies/weathering with you.mp4' },
     { title: "Suzume", link: 'Movies/Suzume.mp4' },
     { title: "Naruto The Last Tower", link: 'Movies/naruto the last tower.mp4' },
-    { title: "Naruto The Last Movie", link: 'https://mega.nz/file/CLpAlbBJ#Bzm1AWHJR64iffbpwZgX0xXy_Tly5MdwV7c47xU0UY0' },
-    { title: "86 (Eighty Six", link: '86.html'}
+    { title: "Naruto The Last Movie", link: 'Movies/naruto the last movie.mp4' },
+    { title: "86 (Eighty Six)", link: '86.html' },
 ];
 
 function showSuggestions(input) {
